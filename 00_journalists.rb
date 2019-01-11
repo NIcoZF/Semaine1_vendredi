@@ -9,10 +9,19 @@ end
 puts " Il y a #{array.count} journalistes dans ce array "
 
 # Combien d'handle contiennent un numéro ?
-#puts " Il y a #{array.count.include("^a-z0-9_")} handle contenant un numéro"
+puts " Il y a #{array.count {|x| x =~ /[0-9]/ }} handle contenant un numéro"
 
 #Combien d'handle contiennent les 4 lettres du prénom "Aude" à la suite (sans prendre en compte les majuscules) ?
 puts " Il y #{array.count { |x| x.downcase.include? 'aude'}} handle qui commmence par Aude"
 
 #Combien commencent par une majuscule (première lettre juste après le @) ?
 puts " Il y #{array.count { |x| x=~ /^@[A-Z]/ }} handle ont un @ suivi d'une majuscule"
+
+#Combien contiennent une majuscule ?
+puts " Il y #{array.count { |x| x =~ /[A-Z]/ }} contiennent une majuscule"
+
+#Combien y a-t-il de underscore _ dans tous les pseudos confondus ?
+#puts " Il y #{array.count { |x| x.include? "_" &&  x.include? "__" } } contiennent un underscore"
+
+#Trie la liste de handle par ordre alphabétique.
+puts array.sort
