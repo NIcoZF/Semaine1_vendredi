@@ -9,4 +9,8 @@ name = ["Bitcoin", "Ethereum", "XRP", "Bitcoin Cash", "EOS", "Litecoin", "Cardan
  h = Hash[name. zip cours]
 
  puts h
- 
+
+ #  La ou les crypto qui ont la plus grosse valeur.
+ puts ''
+ puts '_'*20
+ puts h.key(h.values.max)
