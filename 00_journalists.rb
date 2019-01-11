@@ -13,3 +13,6 @@ puts " Il y a #{array.count} journalistes dans ce array "
 
 #Combien d'handle contiennent les 4 lettres du prénom "Aude" à la suite (sans prendre en compte les majuscules) ?
 puts " Il y #{array.count { |x| x.downcase.include? 'aude'}} handle qui commmence par Aude"
+
+#Combien commencent par une majuscule (première lettre juste après le @) ?
+puts " Il y #{array.count { |x| x=~ /^@[A-Z]/ }} handle ont un @ suivi d'une majuscule"
